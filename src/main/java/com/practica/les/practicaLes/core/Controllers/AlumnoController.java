@@ -3,6 +3,7 @@ package com.practica.les.practicaLes.core.Controllers;
 import com.practica.les.practicaLes.Data.Entities.AlumnosModel;
 import com.practica.les.practicaLes.core.Services.AlumnosService;
 import com.practica.les.practicaLes.core.Services.impl.IAlumnosService;
+import com.practica.les.practicaLes.dtos.AlumnosDto;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class AlumnoController {
     private final IAlumnosService alumnosService;
 
     @GetMapping("/lista")
-    public List<AlumnosModel> selectAlumnos() {
+    public List<AlumnosDto> selectAlumnos() {
         return alumnosService.mostrarAlumnos();
     }
 
